@@ -1,0 +1,20 @@
+subprojects {
+	apply plugin: "java"
+	
+	sourceCompatibility = JavaVersion.VERSION_1_8
+		
+	group = "com.github.unafraid.gradle-multiproject"
+	version = "1.0.0"
+	
+	repositories {
+		mavenCentral()
+	}
+	
+	tasks.withType(JavaCompile) {
+		options.encoding = "UTF-8"
+	}
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = "4.6"
+}
